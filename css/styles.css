@@ -272,7 +272,7 @@ img {
   color: var(--main-color);
   font-size: 12px;
   line-height: 1.17;
-  letter-spacing: 0.01;
+  letter-spacing: 0.01em;
 }
 .icon-wrapper {
   position: relative;
@@ -308,7 +308,7 @@ img {
   color: var(--placeholder);
   font-size: 12px;
   line-height: 1.17;
-  letter-spacing: 0.01;
+  letter-spacing: 0.01em;
 }
 .form-input:hover,
 .form-input:focus,
