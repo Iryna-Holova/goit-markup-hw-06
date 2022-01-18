@@ -344,9 +344,13 @@ img {
   border: 2px solid var(--dark-color);
   border-radius: 2px;
 }
-.form-checkbox-input:checked + .checkbox-icon {
+.form-checkbox-input:checked ~ .checkbox-icon {
   border-color: var(--accent-color);
   background-color: var(--accent-color);
+}
+.form-checkbox-input:hover ~ .checkbox-icon,
+.form-checkbox-input:focus ~ .checkbox-icon {
+  border-color: var(--accent-color);
 }
 .submit-button {
   border: none;
