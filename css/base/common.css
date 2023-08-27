@@ -38,10 +38,6 @@ textarea {
 }
 
 html {
-  scroll-behavior: smooth;
-  overflow-x: hidden;
-  overflow-y: scroll;
-
   ::-webkit-scrollbar {
     width: 5px;
     background-color: var(--color-accent);
@@ -51,19 +47,9 @@ html {
     background-color: rgb(121, 129, 219);
     border-radius: 4px;
   }
-
-  &.modal-show {
-    overflow: hidden;
-    padding-right: 5px;
-  }
-
   @media screen and (min-width: 768px) {
     ::-webkit-scrollbar {
       width: 10px;
-    }
-
-    &.modal-show {
-      padding-right: 10px;
     }
   }
 }
@@ -75,4 +61,19 @@ body {
   letter-spacing: 0.02em;
   color: var(--color-text);
   background-color: var(--color-white-background);
+
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  overflow-y: scroll;
+
+  &.modal-show {
+    overflow: hidden;
+    padding-right: 5px;
+  }
+
+  @media screen and (min-width: 768px) {
+    &.modal-show {
+      padding-right: 10px;
+    }
+  }
 }

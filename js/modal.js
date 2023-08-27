@@ -11,12 +11,12 @@
 
   function toggleModal(e) {
     refs.modal.classList.toggle('is-hidden');
-    document.querySelector('html').classList.toggle('modal-show');
+    document.body.classList.toggle('modal-show');
   }
 
   function closeModal(e) {
     if (e.target !== e.currentTarget) return;
     refs.modal.classList.add('is-hidden');
-    document.querySelector('html').classList.remove('modal-show');
+    document.body.classList.remove('modal-show');
   }
 })();
