@@ -1,0 +1,123 @@
+.header {
+  border-bottom: 1px solid var(--color-accent);
+  box-shadow: var(--shadow-header);
+}
+
+.header-container {
+  display: flex;
+}
+
+.header .logo {
+  display: flex;
+  align-items: center;
+}
+
+@media screen and (max-width: 767px) {
+  .header-container {
+    height: 70px;
+    justify-content: space-between;
+  }
+
+  .header-nav-list,
+  .contacts {
+    display: none;
+  }
+
+  .burger {
+    line-height: 0;
+    background-color: transparent;
+    color: var(--color-dark);
+    transition: color var(--transition-time) var(--transition-func);
+  }
+
+  .burger:hover,
+  .burger:focus {
+    color: var(--color-primary-brand);
+  }
+
+  .burger > svg {
+    fill: currentColor;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .burger {
+    display: none;
+  }
+
+  .header-nav-list {
+    display: flex;
+    column-gap: 40px;
+  }
+
+  .header-nav-link {
+    position: relative;
+    display: block;
+    padding: 24px 0;
+    font-weight: 500;
+    color: var(--color-dark);
+    transition: color var(--transition-time) var(--transition-func);
+  }
+
+  .header-nav-link:hover,
+  .header-nav-link:focus,
+  .header-nav-link.current {
+    color: var(--color-pressed-state);
+  }
+
+  .header-nav-link.current::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: var(--color-pressed-state);
+  }
+
+  .contacts {
+    font-style: normal;
+  }
+
+  .contacts-list {
+    height: 100%;
+    display: flex;
+  }
+
+  .contacts-link {
+    transition: color var(--transition-time) var(--transition-func);
+  }
+
+  .contacts-link:hover,
+  .contacts-link:focus {
+    color: var(--color-pressed-state);
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1157px) {
+  .header-container {
+    justify-content: space-between;
+  }
+
+  .contacts-list {
+    flex-direction: column;
+    row-gap: 12px;
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width: 1158px) {
+  .header-nav-list {
+    margin-left: 76px;
+  }
+
+  .contacts {
+    margin-left: auto;
+  }
+
+  .contacts-list {
+    column-gap: 40px;
+    align-items: center;
+  }
+}

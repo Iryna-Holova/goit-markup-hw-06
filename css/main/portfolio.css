@@ -1,0 +1,132 @@
+.portfolio-buttons {
+  display: flex;
+}
+
+.portfolio-button {
+  border: 1px solid var(--color-accent);
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: var(--color-primary-brand);
+  background-color: var(--color-light);
+  transition-property: box-shadow, color, background-color, border-color;
+  transition-duration: var(--transition-time);
+  transition-timing-function: var(--transition-func);
+}
+
+.portfolio-button:hover,
+.portfolio-button:focus {
+  box-shadow: var(--shadow-button);
+  color: var(--color-white-background);
+  background-color: var(--color-pressed-state);
+  border-color: transparent;
+}
+
+.portfolio-list {
+  display: flex;
+}
+
+.overlay-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  transform: translateY(101%);
+  padding: 40px 32px;
+  color: var(--color-light);
+  background-color: var(--color-primary-brand);
+  transition: transform var(--transition-time) var(--transition-func);
+}
+
+.portfolio-card-container {
+  padding: 32px 16px;
+  border: 1px solid var(--color-accent);
+  border-top: none;
+}
+
+.portfolio-link {
+  display: block;
+  transition: box-shadow var(--transition-time) var(--transition-func);
+}
+
+.portfolio-link:hover,
+.portfolio-link:focus {
+  box-shadow: var(--shadow-card);
+}
+
+.portfolio-link:hover .overlay,
+.portfolio-link:focus .overlay {
+  transform: translateY(0%);
+}
+
+@media screen and (max-width: 767px) {
+  .portfolio-section {
+    padding: 48px 0;
+  }
+
+  .portfolio-buttons {
+    margin-bottom: 48px;
+    flex-wrap: wrap;
+    gap: 16px 24px;
+  }
+
+  .portfolio-button {
+    padding: 8px 16px;
+  }
+
+  .portfolio-list {
+    flex-direction: column;
+    row-gap: 48px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .portfolio-section {
+    padding: 64px 0 96px;
+  }
+
+  .portfolio-buttons {
+    margin-bottom: 64px;
+    justify-content: center;
+    column-gap: 24px;
+  }
+
+  .portfolio-button {
+    padding: 12px 24px;
+  }
+
+  .portfolio-list {
+    flex-wrap: wrap;
+    column-gap: 24px;
+    row-gap: 72px;
+  }
+
+  .portfolio-item {
+    flex-basis: calc((100% - 24px) / 2);
+  }
+}
+
+@media screen and (min-width: 1158px) {
+  .portfolio-section {
+    padding: 96px 0 120px;
+  }
+
+  .portfolio-buttons {
+    margin-bottom: 72px;
+  }
+
+  .portfolio-list {
+    row-gap: 48px;
+  }
+
+  .portfolio-item {
+    flex-basis: calc((100% - 2 * 24px) / 3);
+  }
+}

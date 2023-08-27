@@ -1,0 +1,31 @@
+.close-button {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  display: flex;
+  width: 24px;
+  height: 24px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: var(--color-accent);
+  transition: background-color var(--transition-time) var(--transition-func),
+    border var(--transition-time) var(--transition-func);
+}
+
+.close-button:hover,
+.close-button:focus {
+  border: none;
+  background-color: var(--color-pressed-state);
+}
+
+.close-icon {
+  fill: var(--color-dark);
+  transition: fill var(--transition-time) var(--transition-func);
+}
+
+.close-button:hover .close-icon,
+.close-button:focus .close-icon {
+  fill: var(--color-white-background);
+}

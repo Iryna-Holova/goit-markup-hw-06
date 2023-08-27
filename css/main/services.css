@@ -1,0 +1,21 @@
+@media screen and (max-width: 1157px) {
+  .services-section {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1158px) {
+  .services-section {
+    padding-top: 60px;
+    padding-bottom: 120px;
+  }
+
+  .services-list {
+    display: flex;
+    column-gap: 24px;
+  }
+
+  .services-list-item {
+    flex-basis: calc((100% - 2 * 24px) / 3);
+  }
+}

@@ -1,0 +1,24 @@
+@import './utils/variables.css';
+@import './utils/visually-hidden.css';
+
+@import './base/common.css';
+@import './base/container.css';
+@import './base/section.css';
+@import './base/modal.css';
+
+@import './components/logo.css';
+@import './components/button-primary.css';
+@import './components/social-list.css';
+@import './components/button-close.css';
+
+@import './layout/header.css';
+@import './layout/footer.css';
+@import './layout/mobile-menu.css';
+
+@import './main/hero.css';
+@import './main/features.css';
+@import './main/services.css';
+@import './main/team.css';
+@import './main/customers.css';
+@import './main/order-form.css';
+@import './main/portfolio.css';
